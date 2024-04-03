@@ -1,17 +1,12 @@
 import json
 
-# JSON data
-json_data = '{"name": "John", "age": 30, "city": "New York"}'
+json_data = '{ "tools": ["copilot", "cody", "whisper", "copilot"], "email": "thecookiemonster@cookiejar.com" }'
+data = json.loads(json_data)
 
-# Convert JSON to Python object
-data_object = json.loads(json_data)
+# Accessing the values
+tools = data["tools"]
+email = data["email"]
 
-# Access the object properties
-name = data_object['name']
-age = data_object['age']
-city = data_object['city']
-
-# Print the object properties
-print(f"Name: {name}")
-print(f"Age: {age}")
-print(f"City: {city}")
+# Printing the values
+print("Tools:", tools)
+print("Email:", email)

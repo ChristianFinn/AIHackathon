@@ -1,1 +1,1 @@
-Convert JSON into an object into exisitng data model of 
+Create an object using the following JSON: {tools:["copilot","cody","whisper","copilot"],email:"thecookiemonster@cookiejar.com"}
