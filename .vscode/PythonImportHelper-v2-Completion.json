@@ -1,0 +1,297 @@
+[
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleProblem1.Cody",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "SimpleProblem1.Cody",
+        "description": "SimpleProblem1.Cody",
+        "detail": "SimpleProblem1.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "find_largest_integer",
+        "importPath": "SimpleCoPilot",
+        "description": "SimpleCoPilot",
+        "isExtraImport": true,
+        "detail": "SimpleCoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "find_largest_integer",
+        "importPath": "TechnicalCoPilot",
+        "description": "TechnicalCoPilot",
+        "isExtraImport": true,
+        "detail": "TechnicalCoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "TestCody",
+        "kind": 6,
+        "importPath": "SimpleProblem1.python_tests.cody_test",
+        "description": "SimpleProblem1.python_tests.cody_test",
+        "peekOfCode": "class TestCody(unittest.TestCase):\n    def test_empty_list(self):\n        result = cody.find_largest([])\n        self.assertEqual(result, None)\n    def test_single_element_list(self):\n        result = cody.find_largest([5]) \n        self.assertEqual(result, 5)\n    def test_all_negative_elements(self):\n        result = cody.find_largest([-3, -5, -7])\n        self.assertEqual(result, -3)",
+        "detail": "SimpleProblem1.python_tests.cody_test",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "SimpleProblem1.Cody",
+        "description": "SimpleProblem1.Cody",
+        "peekOfCode": "data = '{tools:[\"copilot\",\"cody\",\"whisper\",\"copilot\"],email:\"thecookiemonster@cookiejar.com\"}'\nobj = json.loads(data)",
+        "detail": "SimpleProblem1.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "obj",
+        "kind": 5,
+        "importPath": "SimpleProblem1.Cody",
+        "description": "SimpleProblem1.Cody",
+        "peekOfCode": "obj = json.loads(data)",
+        "detail": "SimpleProblem1.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "json_data",
+        "kind": 5,
+        "importPath": "SimpleProblem1.CoPilot",
+        "description": "SimpleProblem1.CoPilot",
+        "peekOfCode": "json_data = '{ \"tools\": [\"copilot\", \"cody\", \"whisper\", \"copilot\"], \"email\": \"thecookiemonster@cookiejar.com\" }'\ndata = json.loads(json_data)\n# Accessing the values\ntools = data[\"tools\"]\nemail = data[\"email\"]\n# Printing the values\nprint(\"Tools:\", tools)\nprint(\"Email:\", email)",
+        "detail": "SimpleProblem1.CoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "SimpleProblem1.CoPilot",
+        "description": "SimpleProblem1.CoPilot",
+        "peekOfCode": "data = json.loads(json_data)\n# Accessing the values\ntools = data[\"tools\"]\nemail = data[\"email\"]\n# Printing the values\nprint(\"Tools:\", tools)\nprint(\"Email:\", email)",
+        "detail": "SimpleProblem1.CoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "kind": 5,
+        "importPath": "SimpleProblem1.CoPilot",
+        "description": "SimpleProblem1.CoPilot",
+        "peekOfCode": "tools = data[\"tools\"]\nemail = data[\"email\"]\n# Printing the values\nprint(\"Tools:\", tools)\nprint(\"Email:\", email)",
+        "detail": "SimpleProblem1.CoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "email",
+        "kind": 5,
+        "importPath": "SimpleProblem1.CoPilot",
+        "description": "SimpleProblem1.CoPilot",
+        "peekOfCode": "email = data[\"email\"]\n# Printing the values\nprint(\"Tools:\", tools)\nprint(\"Email:\", email)",
+        "detail": "SimpleProblem1.CoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "validate_email",
+        "kind": 2,
+        "importPath": "SimpleProblem2.Cody",
+        "description": "SimpleProblem2.Cody",
+        "peekOfCode": "def validate_email(email):\n    if len(email) < 3 or len(email) > 20:\n        return False\n    if not re.match(r\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", email):\n        return False\n    return True\nemail = input(\"Enter email: \")\nif validate_email(email):\n    print(\"Valid email\")\nelse:",
+        "detail": "SimpleProblem2.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "email",
+        "kind": 5,
+        "importPath": "SimpleProblem2.Cody",
+        "description": "SimpleProblem2.Cody",
+        "peekOfCode": "email = input(\"Enter email: \")\nif validate_email(email):\n    print(\"Valid email\")\nelse:\n    print(\"Invalid email\")",
+        "detail": "SimpleProblem2.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 5,
+        "importPath": "SimpleProblem3.Cody",
+        "description": "SimpleProblem3.Cody",
+        "peekOfCode": "my_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nunique_list = []\nfor x in my_list:\n    if x not in unique_list:\n        unique_list.append(x)\nprint(unique_list)\n# Second Option\nmy_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nunique_list = list(set(my_list))\nprint(unique_list)",
+        "detail": "SimpleProblem3.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "unique_list",
+        "kind": 5,
+        "importPath": "SimpleProblem3.Cody",
+        "description": "SimpleProblem3.Cody",
+        "peekOfCode": "unique_list = []\nfor x in my_list:\n    if x not in unique_list:\n        unique_list.append(x)\nprint(unique_list)\n# Second Option\nmy_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nunique_list = list(set(my_list))\nprint(unique_list)",
+        "detail": "SimpleProblem3.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 5,
+        "importPath": "SimpleProblem3.Cody",
+        "description": "SimpleProblem3.Cody",
+        "peekOfCode": "my_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nunique_list = list(set(my_list))\nprint(unique_list)",
+        "detail": "SimpleProblem3.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "unique_list",
+        "kind": 5,
+        "importPath": "SimpleProblem3.Cody",
+        "description": "SimpleProblem3.Cody",
+        "peekOfCode": "unique_list = list(set(my_list))\nprint(unique_list)",
+        "detail": "SimpleProblem3.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "SimpleProblem4.Cody",
+        "description": "SimpleProblem4.Cody",
+        "peekOfCode": "conn = sqlite3.connect('example.db')\nc = conn.cursor()\n# Create table\nc.execute('''CREATE TABLE stocks\n             (date text, trans text, symbol text, qty real, price real)''')\n# Insert a row of data\nc.execute(\"INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)\")\n# Save (commit) the changes\nconn.commit()\n# Add unique constraint on symbol column",
+        "detail": "SimpleProblem4.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "SimpleProblem4.Cody",
+        "description": "SimpleProblem4.Cody",
+        "peekOfCode": "c = conn.cursor()\n# Create table\nc.execute('''CREATE TABLE stocks\n             (date text, trans text, symbol text, qty real, price real)''')\n# Insert a row of data\nc.execute(\"INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)\")\n# Save (commit) the changes\nconn.commit()\n# Add unique constraint on symbol column\nc.execute('CREATE UNIQUE INDEX idx_symbol ON stocks(symbol)')",
+        "detail": "SimpleProblem4.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "SimpleProblem4.CoPilot",
+        "description": "SimpleProblem4.CoPilot",
+        "peekOfCode": "conn = sqlite3.connect('example.db')\ncursor = conn.cursor()\n# Create a table with unique fields\ncursor.execute('''\n    CREATE TABLE IF NOT EXISTS your_table (\n        id INTEGER PRIMARY KEY,\n        name TEXT UNIQUE,\n        email TEXT UNIQUE\n    )\n''')",
+        "detail": "SimpleProblem4.CoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "SimpleProblem4.CoPilot",
+        "description": "SimpleProblem4.CoPilot",
+        "peekOfCode": "cursor = conn.cursor()\n# Create a table with unique fields\ncursor.execute('''\n    CREATE TABLE IF NOT EXISTS your_table (\n        id INTEGER PRIMARY KEY,\n        name TEXT UNIQUE,\n        email TEXT UNIQUE\n    )\n''')\n# Commit the changes and close the connection",
+        "detail": "SimpleProblem4.CoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "SimpleProblem4.select",
+        "description": "SimpleProblem4.select",
+        "peekOfCode": "conn = sqlite3.connect('example.db')\nc = conn.cursor()\nc.execute('SELECT * FROM stocks')\nrows = c.fetchall()\nfor row in rows:\n    print(row)\nconn.close()",
+        "detail": "SimpleProblem4.select",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "SimpleProblem4.select",
+        "description": "SimpleProblem4.select",
+        "peekOfCode": "c = conn.cursor()\nc.execute('SELECT * FROM stocks')\nrows = c.fetchall()\nfor row in rows:\n    print(row)\nconn.close()",
+        "detail": "SimpleProblem4.select",
+        "documentation": {}
+    },
+    {
+        "label": "rows",
+        "kind": 5,
+        "importPath": "SimpleProblem4.select",
+        "description": "SimpleProblem4.select",
+        "peekOfCode": "rows = c.fetchall()\nfor row in rows:\n    print(row)\nconn.close()",
+        "detail": "SimpleProblem4.select",
+        "documentation": {}
+    },
+    {
+        "label": "test_find_largest_integer",
+        "kind": 2,
+        "importPath": "SimpleProblem6.python_tests.test_SimpleCoPilot",
+        "description": "SimpleProblem6.python_tests.test_SimpleCoPilot",
+        "peekOfCode": "def test_find_largest_integer():\n    # Test case with a single list\n    assert find_largest_integer([[1, 2, 3]]) == 3\n    # Test case with multiple lists\n    assert find_largest_integer([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) == 9\n    # Test case with negative numbers\n    assert find_largest_integer([[-1, -2, -3], [-4, -5, -6], [-7, -8, -9]]) == -1\n    # Test case with an empty list\n    assert find_largest_integer([]) == float('-inf')\n    # Test case with an empty sublist",
+        "detail": "SimpleProblem6.python_tests.test_SimpleCoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "TestFindLargestInteger",
+        "kind": 6,
+        "importPath": "SimpleProblem6.python_tests.test_TechnicalCoPilot",
+        "description": "SimpleProblem6.python_tests.test_TechnicalCoPilot",
+        "peekOfCode": "class TestFindLargestInteger():\n    def test_empty_lists(self):\n        lst = [[]]\n        assert(find_largest_integer(lst) == None)\n    def test_different_data_types(self):\n        lst = [[1, 2, 3], ['a', 'b', 'c'], [True, False]]\n        assert(find_largest_integer(lst) == 3)\n    def test_negative_numbers(self):\n        lst = [[-5, -10, -3], [-2, -7, -1], [-8, -4, -6]]\n        assert(find_largest_integer(lst) ==  -1)",
+        "detail": "SimpleProblem6.python_tests.test_TechnicalCoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "find_largest_integer",
+        "kind": 2,
+        "importPath": "SimpleProblem6.SimpleCoPilot",
+        "description": "SimpleProblem6.SimpleCoPilot",
+        "peekOfCode": "def find_largest_integer(list_of_lists):\n    max_number = float('-inf')  # Initialize with negative infinity\n    for sublist in list_of_lists:\n        for number in sublist:\n            if number > max_number:\n                max_number = number\n    return max_number",
+        "detail": "SimpleProblem6.SimpleCoPilot",
+        "documentation": {}
+    },
+    {
+        "label": "find_largest_integer",
+        "kind": 2,
+        "importPath": "SimpleProblem6.TechnicalCoPilot",
+        "description": "SimpleProblem6.TechnicalCoPilot",
+        "peekOfCode": "def find_largest_integer(lst):\n    largest_integer = None\n    for sublist in lst:\n        for item in sublist:\n            if isinstance(item, int):\n                if largest_integer is None or item > largest_integer:\n                    largest_integer = item\n    return largest_integer",
+        "detail": "SimpleProblem6.TechnicalCoPilot",
+        "documentation": {}
+    }
+]
