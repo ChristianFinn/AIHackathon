@@ -9,15 +9,6 @@
         "documentation": {}
     },
     {
-        "label": "SimpleProblem1.Cody",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "SimpleProblem1.Cody",
-        "description": "SimpleProblem1.Cody",
-        "detail": "SimpleProblem1.Cody",
-        "documentation": {}
-    },
-    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -27,12 +18,45 @@
         "documentation": {}
     },
     {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "validate_email",
+        "importPath": "SimpleProblem2.Cody",
+        "description": "SimpleProblem2.Cody",
+        "isExtraImport": true,
+        "detail": "SimpleProblem2.Cody",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "re",
         "description": "re",
         "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "UniqueList",
+        "importPath": "SimpleProblem3.Cody",
+        "description": "SimpleProblem3.Cody",
+        "isExtraImport": true,
+        "detail": "SimpleProblem3.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "UniqueList",
+        "importPath": "SimpleProblem3.Cody",
+        "description": "SimpleProblem3.Cody",
+        "isExtraImport": true,
+        "detail": "SimpleProblem3.Cody",
         "documentation": {}
     },
     {
@@ -51,15 +75,6 @@
         "importPath": "pytest",
         "description": "pytest",
         "detail": "pytest",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -83,7 +98,25 @@
         "kind": 6,
         "importPath": "SimpleProblem1.python_tests.cody_test",
         "description": "SimpleProblem1.python_tests.cody_test",
-        "peekOfCode": "class TestCody(unittest.TestCase):\n    def test_empty_list(self):\n        result = cody.find_largest([])\n        self.assertEqual(result, None)\n    def test_single_element_list(self):\n        result = cody.find_largest([5]) \n        self.assertEqual(result, 5)\n    def test_all_negative_elements(self):\n        result = cody.find_largest([-3, -5, -7])\n        self.assertEqual(result, -3)",
+        "peekOfCode": "class TestCody(unittest.TestCase):\n    def test_empty_list(self):\n        lst = []\n        self.assertEqual(find_largest_integer(lst), None)\n    def test_list_with_one_element(self):\n        lst = [5] \n        self.assertEqual(find_largest_integer(lst), 5)\n    def test_list_with_duplicates(self):\n        lst = [1, 5, 2, 5, 3]\n        self.assertEqual(find_largest_integer(lst), 5)",
+        "detail": "SimpleProblem1.python_tests.cody_test",
+        "documentation": {}
+    },
+    {
+        "label": "TestSelectedCode",
+        "kind": 6,
+        "importPath": "SimpleProblem1.python_tests.cody_test",
+        "description": "SimpleProblem1.python_tests.cody_test",
+        "peekOfCode": "class TestSelectedCode(unittest.TestCase):\n    def test_empty_list(self):\n        lst = []\n        self.assertEqual(find_largest(lst), None)\n    def test_single_element_list(self):\n        lst = [5] \n        self.assertEqual(find_largest(lst), 5)\n    def test_list_with_duplicates(self):\n        lst = [1, 5, 2, 5, 3]\n        self.assertEqual(find_largest(lst), 5)",
+        "detail": "SimpleProblem1.python_tests.cody_test",
+        "documentation": {}
+    },
+    {
+        "label": "TestUniqueList",
+        "kind": 6,
+        "importPath": "SimpleProblem1.python_tests.cody_test",
+        "description": "SimpleProblem1.python_tests.cody_test",
+        "peekOfCode": "class TestUniqueList(unittest.TestCase):\n    def test_empty_list(self):\n        my_list = []\n        unique_list = []\n        Cody.unique(my_list, unique_list)\n        self.assertEqual(len(unique_list), 0)\n    def test_single_value_list(self):\n        my_list = [1]\n        unique_list = []\n        Cody.unique(my_list, unique_list)",
         "detail": "SimpleProblem1.python_tests.cody_test",
         "documentation": {}
     },
@@ -142,6 +175,15 @@
         "documentation": {}
     },
     {
+        "label": "TestEmailValidation",
+        "kind": 6,
+        "importPath": "SimpleProblem2.python_tests.cody_tests",
+        "description": "SimpleProblem2.python_tests.cody_tests",
+        "peekOfCode": "class TestEmailValidation(unittest.TestCase):\n    def test_valid_email(self):\n        self.assertTrue(validate_email('test@example.com'))\n    def test_invalid_email_missing_at(self):\n        self.assertFalse(validate_email('testexample.com'))\n    def test_invalid_email_too_short(self):\n        self.assertFalse(validate_email('a@b.com'))\n    def test_invalid_email_too_long(self):\n        self.assertFalse(validate_email('a' * 50 + '@example.com'))\n    def test_invalid_email_invalid_domain(self):",
+        "detail": "SimpleProblem2.python_tests.cody_tests",
+        "documentation": {}
+    },
+    {
         "label": "validate_email",
         "kind": 2,
         "importPath": "SimpleProblem2.Cody",
@@ -160,20 +202,20 @@
         "documentation": {}
     },
     {
-        "label": "my_list",
-        "kind": 5,
+        "label": "UniqueList",
+        "kind": 6,
         "importPath": "SimpleProblem3.Cody",
         "description": "SimpleProblem3.Cody",
-        "peekOfCode": "my_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nunique_list = []\nfor x in my_list:\n    if x not in unique_list:\n        unique_list.append(x)\nprint(unique_list)\n# Second Option\nmy_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nunique_list = list(set(my_list))\nprint(unique_list)",
+        "peekOfCode": "class UniqueList:\n    def __init__(self, my_list):\n        self.my_list = my_list\n        self.unique_list = []\n    def get_unique_list(self):\n        for x in self.my_list:\n            if x not in self.unique_list:\n                self.unique_list.append(x)\n        return self.unique_list\n# Second Option",
         "detail": "SimpleProblem3.Cody",
         "documentation": {}
     },
     {
-        "label": "unique_list",
+        "label": "my_list",
         "kind": 5,
         "importPath": "SimpleProblem3.Cody",
         "description": "SimpleProblem3.Cody",
-        "peekOfCode": "unique_list = []\nfor x in my_list:\n    if x not in unique_list:\n        unique_list.append(x)\nprint(unique_list)\n# Second Option\nmy_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nunique_list = list(set(my_list))\nprint(unique_list)",
+        "peekOfCode": "my_list = [\"apple\", \"banana\", \"cherry\", \"apple\", \"orange\", \"banana\"]\nclass UniqueList:\n    def __init__(self, my_list):\n        self.my_list = my_list\n        self.unique_list = []\n    def get_unique_list(self):\n        for x in self.my_list:\n            if x not in self.unique_list:\n                self.unique_list.append(x)\n        return self.unique_list",
         "detail": "SimpleProblem3.Cody",
         "documentation": {}
     },
@@ -193,6 +235,15 @@
         "description": "SimpleProblem3.Cody",
         "peekOfCode": "unique_list = list(set(my_list))\nprint(unique_list)",
         "detail": "SimpleProblem3.Cody",
+        "documentation": {}
+    },
+    {
+        "label": "TestUniqueList",
+        "kind": 6,
+        "importPath": "SimpleProblem3.cody_tests",
+        "description": "SimpleProblem3.cody_tests",
+        "peekOfCode": "class TestUniqueList(unittest.TestCase):\n    def test_empty_list(self):\n        my_list = []\n        unique_list = UniqueList(my_list).get_unique_list()\n        self.assertEqual(len(unique_list), 0)\n    def test_single_value_list(self):\n        my_list = [1] \n        unique_list = UniqueList(my_list).get_unique_list()\n        self.assertEqual(unique_list, [1])\n    def test_duplicates(self):",
+        "detail": "SimpleProblem3.cody_tests",
         "documentation": {}
     },
     {
