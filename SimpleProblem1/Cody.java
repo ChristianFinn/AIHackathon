@@ -1,3 +1,5 @@
+package SimpleProblem1;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Main {
